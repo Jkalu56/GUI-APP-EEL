@@ -1,0 +1,88 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+  text-transform: capitalize;
+}
+
+.lower{
+  text-transform: lowercase;
+}
+
+.my-div-icon {
+    background-color:red;
+    width: 15px;
+    height: 15px;
+    border-radius: 0px 7px;
+  }
+
+div.right {
+  position: fixed;
+
+}
+
+#clock {
+  color: white;
+}
+
+#map {
+  top: 1%;
+  width: 51.24%;
+  height: 87.22%;
+  left: 0;
+}
+
+.right {
+  padding: 1% 1%;
+  top: 0;
+  margin: 0.1% 2%;
+  right: 0;
+}
+
+
+#external {
+  margin-top: 5%;
+  width: 43.19%;
+  height: 36.09%;
+  background-color: darkblue;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#internal {
+  margin-top: 28%;
+  width: 43.19%;
+  height: 36.09%;
+  background-color: rgb(218, 218, 79);
+  color: darkblue;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  .right, #internal, #external {
+    font-size: 0.6em;
+    width: 42%;
+  }
+}
+
+h1 {
+  color: white;
+  font-size: 1em;
+  position: fixed;
+}
+
+#external_label {
+  top: 3%;
+  right: 0;
+}
+
+#internal_label {
+  top: 52%;
+  right: 0;
+}
