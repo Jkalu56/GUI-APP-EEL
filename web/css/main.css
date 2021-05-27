@@ -30,17 +30,40 @@ div.right {
 }
 
 #map {
-  top: 1%;
+  top: 0;
   width: 51.24%;
   height: 87.22%;
   left: 0;
 }
 
 .right {
+	display: flex;
+	max-width: 47%;
+	position: fixed;
+	right: 0;
+	top: 27px;
+	flex-direction: column;
+}
+
+#external {
+	background-color: darkblue;
+	color: white;
+}
+
+#internal {
+	background-color: rgba(218, 218, 79);
+	color: darkblue;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+/*
+.right {
   padding: 1% 1%;
   top: 0;
   margin: 0.1% 2%;
   right: 0;
+  font-size: 36px;
 }
 
 
@@ -50,12 +73,11 @@ div.right {
   height: 36.09%;
   background-color: darkblue;
   color: white;
-  font-size: 1em;
   font-weight: bold;
 }
 
 #internal {
-  margin-top: 28%;
+  margin-top: 37%;
   width: 43.19%;
   height: 36.09%;
   background-color: rgb(218, 218, 79);
@@ -63,26 +85,31 @@ div.right {
   font-size: 1em;
   font-weight: bold;
 }
+*/
 
+/*
 @media screen and (max-width: 800px) {
   .right, #internal, #external {
-    font-size: 0.6em;
+    font-size: 1.1em;
     width: 42%;
   }
 }
+*/
 
 h1 {
   color: white;
-  font-size: 1em;
-  position: fixed;
+  margin: 5px;
+/*  font-size: 1em; */
 }
 
+
 #external_label {
-  top: 3%;
-  right: 0;
+/*  top: 3%; */
+/*  right: 0; */
 }
 
 #internal_label {
-  top: 52%;
-  right: 0;
+/*  top: 52%; */
+/*  right: 0; */
 }
+
