@@ -7,41 +7,45 @@ import eel
 
 eel.init('web')
 
-count = 0.00001
-switch = 0
-latitude = 40.4310
-longitude = -86.9149
+dataDict = {}
+
+def retrieve_data(optionalvalue=None):
+    with open("sample.csv", 'r') as file:
+        rd = file.readlines()
+        rd2 = []
+    for line in rd:
+        line = line.replace('\n', '')
+        line = line.split(',')
+        rd2.append(line)
+    keys = rd2[0]
+    values = rd2[-1]
+    return dict(zip(keys, values)) if not optionalvalue else dict(zip(keys, values))[optionalvalue]
+
 
 @eel.expose
 def get_latitude():
-    global count, latitude, switch
-    switch += 1
-    if switch % 7 == 0:
-        latitude -= count
-    else:
-        latitude += count
+    latitude = retrieve_data("Latitude")
     return latitude
 
 @eel.expose
 def get_longitude():
-    global count, longitude, switch
-    if switch % 3 == 0:
-        longitude -= count
-    else:
-        longitude += count
+    longitude = retrieve_data("Longitude")
     return longitude
 
 @eel.expose
 def get_altitude():
-    return 0
+    altitude = retrieve_data("Altitude")
+    return altitude
 
 @eel.expose
 def get_ext_temperature():
-    return 0
+    temp = retrieve_data("External_Temperature")
+    return temp
 
 @eel.expose
 def get_int_temperature():
-    return 0
+    temp = retrieve_data("Internal_Temperature")
+    return temp
 
 @eel.expose
 def print_stuff(message):
