@@ -7,7 +7,6 @@ import eel
 
 eel.init('web')
 
-dataDict = {}
 
 def retrieve_data(optionalvalue=None):
     with open("sample.csv", 'r') as file:
