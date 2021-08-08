@@ -1,4 +1,5 @@
 External_Temperature,Internal_Temperature,Altitude,Latitude,Longitude,Pressure
 1,1,1,1,1,1,1
 2,3,4,5,6,7,8
-100,100,100,100,50,-10,100
+100,100,100,40.6028,-86.8672,-10
+-30,60,100,40.6028,-86.8672,-10
